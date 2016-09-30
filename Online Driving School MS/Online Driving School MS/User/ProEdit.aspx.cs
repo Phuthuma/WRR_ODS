@@ -37,18 +37,18 @@ namespace Online_Driving_School_MS.User
             }
 
             else
-                Response.Redirect("~/Account/Login.aspx");
+                Response.Redirect("~/Phuthuma/Login.aspx");
 
         }
 
         protected void LinkButton1_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("~/Account/StudProEdit.aspx");
+            Response.Redirect("~/Phuthuma/StudProEdit.aspx");
         }
 
         protected void linkUploadLink_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Account/StudProEdit.aspx");
+            Response.Redirect("~/Phuthuma/StudProEdit.aspx");
         }
 
        

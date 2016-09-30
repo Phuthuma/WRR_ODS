@@ -62,14 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Account\ChangePass.aspx" />
-    <Content Include="Account\GenerateQuote.aspx" />
-    <Content Include="Account\Login.aspx" />
-    <Content Include="Account\PassReset.aspx" />
-    <Content Include="Account\Registration.aspx" />
-    <Content Include="Account\StudProEdit.aspx" />
-    <Content Include="Account\UserProfile.aspx" />
-    <Content Include="Account\VieweStdProAdmin.aspx" />
+    <Content Include="Phuthuma\ChangePass.aspx" />
+    <Content Include="Phuthuma\GenerateQuote.aspx" />
+    <Content Include="Phuthuma\Login.aspx" />
+    <Content Include="Phuthuma\PassReset.aspx" />
+    <Content Include="Phuthuma\Registration.aspx" />
+    <Content Include="Phuthuma\StudProEdit.aspx" />
+    <Content Include="Phuthuma\UserProfile.aspx" />
+    <Content Include="Phuthuma\VieweStdProAdmin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1.jpg" />
@@ -88,15 +88,6 @@
     <Content Include="Learners.aspx" />
     <Content Include="Lessons.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="Phuthuma\ChangePass.aspx" />
-    <Content Include="Phuthuma\GenerateQuote.aspx" />
-    <Content Include="Phuthuma\Login.aspx" />
-    <Content Include="Phuthuma\PassReset.aspx" />
-    <Content Include="Phuthuma\ProEdit.aspx" />
-    <Content Include="Phuthuma\Registration.aspx" />
-    <Content Include="Phuthuma\StudProEdit.aspx" />
-    <Content Include="Phuthuma\UserProfile.aspx" />
-    <Content Include="Phuthuma\VieweStdProAdmin.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -118,60 +109,60 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\ChangePass.aspx.cs">
+    <Compile Include="Phuthuma\ChangePass.aspx.cs">
       <DependentUpon>ChangePass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\ChangePass.aspx.designer.cs">
+    <Compile Include="Phuthuma\ChangePass.aspx.designer.cs">
       <DependentUpon>ChangePass.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\GenerateQuote.aspx.cs">
+    <Compile Include="Phuthuma\GenerateQuote.aspx.cs">
       <DependentUpon>GenerateQuote.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\GenerateQuote.aspx.designer.cs">
+    <Compile Include="Phuthuma\GenerateQuote.aspx.designer.cs">
       <DependentUpon>GenerateQuote.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Login.aspx.cs">
+    <Compile Include="Phuthuma\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
+    <Compile Include="Phuthuma\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\PassReset.aspx.cs">
+    <Compile Include="Phuthuma\PassReset.aspx.cs">
       <DependentUpon>PassReset.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\PassReset.aspx.designer.cs">
+    <Compile Include="Phuthuma\PassReset.aspx.designer.cs">
       <DependentUpon>PassReset.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Registration.aspx.cs">
+    <Compile Include="Phuthuma\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Registration.aspx.designer.cs">
+    <Compile Include="Phuthuma\Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\StudProEdit.aspx.cs">
+    <Compile Include="Phuthuma\StudProEdit.aspx.cs">
       <DependentUpon>StudProEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\StudProEdit.aspx.designer.cs">
+    <Compile Include="Phuthuma\StudProEdit.aspx.designer.cs">
       <DependentUpon>StudProEdit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\UserProfile.aspx.cs">
+    <Compile Include="Phuthuma\UserProfile.aspx.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\UserProfile.aspx.designer.cs">
+    <Compile Include="Phuthuma\UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\VieweStdProAdmin.aspx.cs">
+    <Compile Include="Phuthuma\VieweStdProAdmin.aspx.cs">
       <DependentUpon>VieweStdProAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\VieweStdProAdmin.aspx.designer.cs">
+    <Compile Include="Phuthuma\VieweStdProAdmin.aspx.designer.cs">
       <DependentUpon>VieweStdProAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
@@ -215,69 +206,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\ChangePass.aspx.cs">
-      <DependentUpon>ChangePass.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\ChangePass.aspx.designer.cs">
-      <DependentUpon>ChangePass.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\GenerateQuote.aspx.cs">
-      <DependentUpon>GenerateQuote.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\GenerateQuote.aspx.designer.cs">
-      <DependentUpon>GenerateQuote.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\PassReset.aspx.cs">
-      <DependentUpon>PassReset.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\PassReset.aspx.designer.cs">
-      <DependentUpon>PassReset.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\ProEdit.aspx.cs">
-      <DependentUpon>ProEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\ProEdit.aspx.designer.cs">
-      <DependentUpon>ProEdit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\Registration.aspx.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\Registration.aspx.designer.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\StudProEdit.aspx.cs">
-      <DependentUpon>StudProEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\StudProEdit.aspx.designer.cs">
-      <DependentUpon>StudProEdit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\UserProfile.aspx.cs">
-      <DependentUpon>UserProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\UserProfile.aspx.designer.cs">
-      <DependentUpon>UserProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phuthuma\VieweStdProAdmin.aspx.cs">
-      <DependentUpon>VieweStdProAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phuthuma\VieweStdProAdmin.aspx.designer.cs">
-      <DependentUpon>VieweStdProAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
