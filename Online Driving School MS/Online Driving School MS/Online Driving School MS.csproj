@@ -61,8 +61,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Main.aspx" />
     <Content Include="Phuthuma\ChangePass.aspx" />
     <Content Include="Phuthuma\GenerateQuote.aspx" />
     <Content Include="Phuthuma\Login.aspx" />
@@ -71,7 +69,6 @@
     <Content Include="Phuthuma\StudProEdit.aspx" />
     <Content Include="Phuthuma\UserProfile.aspx" />
     <Content Include="Phuthuma\VieweStdProAdmin.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
@@ -85,15 +82,9 @@
     <Content Include="Images\images.png" />
     <Content Include="Images\petse.jpg" />
     <Content Include="Images\userProfile.png" />
-    <Content Include="Learn.aspx" />
-    <Content Include="Learners.aspx" />
-    <Content Include="Lessons.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\npm.js" />
-    <Content Include="Sessions.aspx" />
     <Content Include="Styles\bootstrap-theme.css" />
     <Content Include="Styles\bootstrap-theme.min.css" />
     <Content Include="Styles\bootstrap.css" />
@@ -103,26 +94,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="HomeUser.Master.cs">
+      <DependentUpon>HomeUser.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Master.Master.cs">
-      <DependentUpon>Master.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Master.Master.designer.cs">
-      <DependentUpon>Master.Master</DependentUpon>
+    <Compile Include="HomeUser.Master.designer.cs">
+      <DependentUpon>HomeUser.Master</DependentUpon>
     </Compile>
     <Compile Include="Phuthuma\ChangePass.aspx.cs">
       <DependentUpon>ChangePass.aspx</DependentUpon>
@@ -180,13 +157,6 @@
     <Compile Include="Phuthuma\VieweStdProAdmin.aspx.designer.cs">
       <DependentUpon>VieweStdProAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -194,49 +164,7 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Learn.aspx.cs">
-      <DependentUpon>Learn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Learn.aspx.designer.cs">
-      <DependentUpon>Learn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Learners.aspx.cs">
-      <DependentUpon>Learners.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Learners.aspx.designer.cs">
-      <DependentUpon>Learners.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Lessons.aspx.cs">
-      <DependentUpon>Lessons.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Lessons.aspx.designer.cs">
-      <DependentUpon>Lessons.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sessions.aspx.cs">
-      <DependentUpon>Sessions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sessions.aspx.designer.cs">
-      <DependentUpon>Sessions.aspx</DependentUpon>
-    </Compile>
     <Compile Include="site.Master.cs">
       <DependentUpon>site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,7 +191,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Master.Master" />
+    <Content Include="HomeUser.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

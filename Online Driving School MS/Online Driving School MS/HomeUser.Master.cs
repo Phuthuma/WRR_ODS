@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Online_Driving_School_MS
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class HomeUser : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

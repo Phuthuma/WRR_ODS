@@ -43,14 +43,10 @@
                        </div>
                      <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right"> 
-                             <li class="active"><a href="~/Home.aspx">Home</a></li>
-                             <li><a href="~/Lessons.aspx">Lessons</a></li>
-                             <li><a href="~/Sessions.aspx">Sessions</a></li>
-                             <li><a href="~/Learners.aspx">Learners</a></li>
-                             <li><a href="~/Learn.aspx">Learn</a></li>
-                             <li><a href="~/About.aspx">About</a></li>
-                             <li><a href="~/Register.aspx">Register</a></li>
-                             <li><a href="~/Login.aspx">Login</a></li>
+                             <li class="active"><asp:LinkButton ID="lbHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbQuote" runat="server" PostBackUrl="~/Phuthuma/GenerateQuote.aspx">Quote</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbLogIn" runat="server" PostBackUrl="~/Phuthuma/Login.aspx">LogIn</asp:LinkButton></li>
+                             <li></li>
                         </ul>
                     </div>
                 </div>

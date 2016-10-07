@@ -1,9 +1,10 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Online_Driving_School_MS.Master" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeUser.master.cs" Inherits="Online_Driving_School_MS.HomeUser" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -28,9 +29,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class=" navbar navbar-default navbar-fixed-top"  role="navigation">
-        <div class="container">
-            <div class="navbar-header">
+       
+             <div class=" navbar navbar-default navbar-fixed-top"  role="navigation"> 
+                 <div class="container">
+                     <div class="navbar-header">
                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                              <span class="sr-only">Toggle navigation</span>
                              <span class="icon-bar"></span>
@@ -38,24 +40,28 @@
                              <span class="icon-bar"></span>
                          </button>
                          <a class="navbar-brand" href="Home.aspx"><span><img alt="Logo" src="/Images/images.png" height="40" />ODS</span></a>
+                       </div>
+                     <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right"> 
+                             <li class="active"><asp:LinkButton ID="lbHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbQuote" runat="server" PostBackUrl="~/Phuthuma/GenerateQuote.aspx">Quote</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbSession" runat="server">Sessions</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbLogIn" runat="server" PostBackUrl="~/Phuthuma/Login.aspx">LogIn</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbLogOut" runat="server" PostBackUrl="~/Home.aspx">LogOut</asp:LinkButton></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+       
+            <div>
+                <asp:ContentPlaceHolder ID="content" runat="server">
         
-                    </asp:ContentPlaceHolder>
-                </ul>
+                </asp:ContentPlaceHolder>
             </div>
-            
-        </div>
-    </div>
-
-    <div>
-        <asp:ContentPlaceHolder ID="content" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-
     </form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>
