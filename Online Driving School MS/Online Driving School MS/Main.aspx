@@ -1,16 +1,22 @@
-﻿
-<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Online_Driving_School_MS.Home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Online_Driving_School_MS.Main" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
- 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Styles/bootstrap.min.css" rel="stylesheet" />
     <link href="Styles/siteStyle.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="content" runat="server">
-
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <li class="active"><a href="~/Home.aspx">Home</a></li>
+    <li><a>Sessions</a></li>
+    <li><a>Learners</a></li>
+    <li><a>Learn</a></li>
+    <li><a>About</a></li>
+    <li><a>Register</a></li>
+    <li><a>Login</a></li>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="content" runat="server">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -129,5 +135,4 @@
         </div>
     </footer>
     <!--Footer-->
-
 </asp:Content>
