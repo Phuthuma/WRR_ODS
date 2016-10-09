@@ -11,7 +11,16 @@ namespace Online_Driving_School_MS.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Have two GenQuotes
+            HttpCookie cookie = Request.Cookies["UserInfo"];
+            if (cookie != null)
+            {
+                //Redirect to GenQuote with Master.Master
+            }
+            else
+            {
+                //Redirect to GenQuote with site.Master
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
