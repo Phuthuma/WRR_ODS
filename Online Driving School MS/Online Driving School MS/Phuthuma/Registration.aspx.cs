@@ -13,21 +13,6 @@ namespace Online_Driving_School_MS.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
-            {
-                SqlConnection con=new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
-                
-                con.Open();
-
-                string chechuser="select count(*) from STUDENT where Uname='"+txtUname.Text+"'";
-                SqlCommand com=new SqlCommand(chechuser,con);
-                int temp=int.Parse(com.ExecuteScalar().ToString());
-                if(temp==1){
-                    Response.Write("User already exists");
-                }
-                
-                con.Close();
-            }
         }
 
         protected void btnReg_Click(object sender, EventArgs e)
@@ -35,13 +20,26 @@ namespace Online_Driving_School_MS.Account
             SqlConnection con = new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
 
             con.Open();
+            string chechuser="select count(*) from STUDENT where Uname='"+txtUname.Text+"'";
+            SqlCommand com=new SqlCommand(chechuser,con);
+            int temp=int.Parse(com.ExecuteScalar().ToString());
+            if (temp >= 1)
+            {
+                FeedMsg.Text = txtUname.Text + " Already Exists";
+                FeedMsg.ForeColor = System.Drawing.Color.FromName("Red");
+                FeedMsg.Visible = true;
+            }
+            else
+            {
+                string insertquery = "insert into STUDENT(Uname,Name,Surname,Email,Cell,Password) values('" + txtUname.Text + "','" + txtName.Text + "','" + txtSur.Text + "','" + txtEmail.Text + "','" + txtCell.Text + "','" + txtPass.Text + "')";
+                com = new SqlCommand(insertquery, con);
+                com.ExecuteNonQuery();
+                FeedMsg.Text = "You are successfully registered";
+                FeedMsg.ForeColor = System.Drawing.Color.FromName("Green");
+                FeedMsg.Visible = true;
+            }
 
-            string insertquery = "insert into STUDENT(Uname,Name,Surname,Email,Cell,Password) values('"+txtUname.Text+"','"+txtName.Text+"','"+txtSur.Text+"','"+txtEmail.Text+"','"+txtCell.Text+"','"+txtPass.Text+"')";
-            SqlCommand com = new SqlCommand(insertquery, con);
-            com.ExecuteNonQuery();
-
-            con.Close();
-            FeedMsg.Visible = true;
+            con.Close();   
         }
 
         protected void btnClr_Click(object sender, EventArgs e)

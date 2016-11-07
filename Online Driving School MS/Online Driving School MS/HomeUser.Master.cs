@@ -13,5 +13,14 @@ namespace Online_Driving_School_MS
         {
 
         }
+
+        protected void lbLogOut_Click(object sender, EventArgs e)
+        {
+            //Pre: User is loggedOn
+            //Post: Make cookie = null and redirect user to home page
+
+            Session["New"] = null;
+            Response.Redirect("~/Home.aspx");
+        }
     }
 }

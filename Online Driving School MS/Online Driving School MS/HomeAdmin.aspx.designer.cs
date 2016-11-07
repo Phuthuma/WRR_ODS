@@ -7,45 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Online_Driving_School_MS.Account {
+namespace Online_Driving_School_MS {
     
     
-    public partial class StudProEdit {
+    public partial class HomeTeach {
         
         /// <summary>
-        /// Label7 control.
+        /// lbHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.LinkButton lbHome;
         
         /// <summary>
-        /// uplimg control.
+        /// lbEmps control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload uplimg;
+        protected global::System.Web.UI.WebControls.LinkButton lbEmps;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// lbNots control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.LinkButton lbNots;
         
         /// <summary>
-        /// btnSub control.
+        /// lbLogOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSub;
+        protected global::System.Web.UI.WebControls.LinkButton lbLogOut;
     }
 }

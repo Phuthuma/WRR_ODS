@@ -18,7 +18,10 @@ namespace Online_Driving_School_MS.Account
 
         protected void btnLogIn_Click(object sender, EventArgs e)
         {
+            //Search database to find students
             SqlConnection con = new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
+            
+            //open connection
 
             con.Open();
 
@@ -27,8 +30,12 @@ namespace Online_Driving_School_MS.Account
             DataTable dt = new DataTable();
             sda.Fill(dt);
             
+            //if student is found create a cookie that will pass information to other pages
             if (dt.Rows.Count>0)
             {
+                //Creates new session
+                Session["New"] = txtUname.Text;
+
                 HttpCookie cookie = new HttpCookie("UserInfo");
                 cookie["Uname"] = txtUname.Text;
                 Response.Cookies.Add(cookie);
@@ -36,24 +43,43 @@ namespace Online_Driving_School_MS.Account
             }
             else
             {
-                Label1.Visible = true;
+                chechuser = "select * from EMPLOYEE where Uname='" + txtUname.Text + "' and Password='" + txtPass.Text + "'";
+                sda = new SqlDataAdapter(chechuser, con);
+                dt = new DataTable();
+                sda.Fill(dt);
+
+                //if employee is found create a cookie that will pass information to other pages
+                if (dt.Rows.Count > 0)
+                {
+                    //Creates new session
+                    Session["New"] = txtUname.Text;
+
+                    HttpCookie cookie = new HttpCookie("UserInfo");
+                    cookie["Uname"] = txtUname.Text;
+                    Response.Cookies.Add(cookie);
+                    Response.Redirect("~/Phuthuma/EmpUser/EmpProEdit.aspx");
+                }
+
+                else
+                {
+                    Label1.Visible = true;
+                }
             }
-
-            
-            con.Close();
-
-
-            
+        
+            //close connection
+            con.Close();           
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            //Clear textboxes
             txtUname.Text = "";
             txtPass.Text = "";
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
+            //Fogot password linkbutton
             Response.Redirect("PassReset.aspx");
         }
 

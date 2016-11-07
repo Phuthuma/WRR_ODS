@@ -61,8 +61,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HomeAdmin.aspx" />
+    <Content Include="HomeUser.aspx" />
     <Content Include="Phuthuma\ChangePass.aspx" />
+    <Content Include="Phuthuma\EmpUser\EmpProEdit.aspx" />
+    <Content Include="Phuthuma\EmpUser\RegisterEmp.aspx" />
     <Content Include="Phuthuma\GenerateQuote.aspx" />
+    <Content Include="Phuthuma\GenQuoteUser.aspx" />
     <Content Include="Phuthuma\Login.aspx" />
     <Content Include="Phuthuma\PassReset.aspx" />
     <Content Include="Phuthuma\Registration.aspx" />
@@ -82,9 +87,11 @@
     <Content Include="Images\images.png" />
     <Content Include="Images\petse.jpg" />
     <Content Include="Images\userProfile.png" />
+    <Content Include="ScriptCode.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Style.css" />
     <Content Include="Styles\bootstrap-theme.css" />
     <Content Include="Styles\bootstrap-theme.min.css" />
     <Content Include="Styles\bootstrap.css" />
@@ -92,8 +99,30 @@
     <Content Include="Styles\siteStyle.css" />
     <Content Include="User\ProEdit.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Workings\WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomeAdmin.Master.cs">
+      <DependentUpon>HomeAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.Master.designer.cs">
+      <DependentUpon>HomeAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAdmin.aspx.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.aspx.designer.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeUser.aspx.cs">
+      <DependentUpon>HomeUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeUser.aspx.designer.cs">
+      <DependentUpon>HomeUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomeUser.Master.cs">
       <DependentUpon>HomeUser.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,12 +137,33 @@
     <Compile Include="Phuthuma\ChangePass.aspx.designer.cs">
       <DependentUpon>ChangePass.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Phuthuma\EmpUser\EmpProEdit.aspx.cs">
+      <DependentUpon>EmpProEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phuthuma\EmpUser\EmpProEdit.aspx.designer.cs">
+      <DependentUpon>EmpProEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phuthuma\EmpUser\RegisterEmp.aspx.cs">
+      <DependentUpon>RegisterEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phuthuma\EmpUser\RegisterEmp.aspx.designer.cs">
+      <DependentUpon>RegisterEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Phuthuma\GenerateQuote.aspx.cs">
       <DependentUpon>GenerateQuote.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Phuthuma\GenerateQuote.aspx.designer.cs">
       <DependentUpon>GenerateQuote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phuthuma\GenQuoteUser.aspx.cs">
+      <DependentUpon>GenQuoteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phuthuma\GenQuoteUser.aspx.designer.cs">
+      <DependentUpon>GenQuoteUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Phuthuma\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -179,6 +229,13 @@
     <Compile Include="User\ProEdit.aspx.designer.cs">
       <DependentUpon>ProEdit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Workings\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workings\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="site.Master" />
@@ -192,6 +249,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="HomeUser.Master" />
+    <Content Include="HomeAdmin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

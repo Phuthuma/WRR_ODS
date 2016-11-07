@@ -24,6 +24,7 @@ namespace Online_Driving_School_MS.Account
         {
             SqlConnection con=new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
             con.Open();
+                //takes UserName as entered by the user
                 string com="select * from Student where Uname='"+txtUname.Text+"'";
                 SqlDataAdapter sda=new SqlDataAdapter(com,con);
                 DataTable dt=new DataTable();
@@ -38,12 +39,13 @@ namespace Online_Driving_School_MS.Account
 
                     try
                     {
+                        //sends email to user
                         MailMessage mm = new MailMessage("phuthumaloyisopetse@gmail.com", email);
                         mm.Subject = "Password Reset";
                         
                         StringBuilder strBody = new StringBuilder();
                         strBody.Append("Dear "+name+"<br/><br/>");
-                        strBody.Append("Follow this link to change password http://localhost:49398/Account/ChangePass.aspx?uname=" + uname.ToString());
+                        strBody.Append("Follow this link to change password http://localhost:49398/Phuthuma/ChangePass.aspx?uname=" + uname.ToString());
                         strBody.Append("<br/><br/>");
                         strBody.Append("Regards <br/>");
                         strBody.Append("ODS");

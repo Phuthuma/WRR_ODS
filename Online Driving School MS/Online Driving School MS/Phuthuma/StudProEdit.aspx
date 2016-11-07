@@ -56,10 +56,11 @@
             <td class="auto-style4">
                 &nbsp;</td>
             <td class="auto-style2">
-                <asp:FileUpload ID="uplimg" runat="server" />
+                <asp:FileUpload ID="uplimg" runat="server" accept="image/*" />
             </td>
             <td>
-                &nbsp;</td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="uplimg" ErrorMessage="* Choose Image" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">

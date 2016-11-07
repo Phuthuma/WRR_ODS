@@ -16,44 +16,12 @@ namespace Online_Driving_School_MS.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-             HttpCookie cookie = Request.Cookies["UserInfo"];
-
-             if (cookie != null)
-             {
-
-                 string uname = cookie["Uname"];
-
-                 SqlConnection con = new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
-
-                 con.Open();
-
-                 string sqlcom = "select * from STUDENT where Uname='" + uname + "'";
-                 SqlDataAdapter sda = new SqlDataAdapter(sqlcom, con);
-                 DataTable dt = new DataTable();
-
-                 sda.Fill(dt);
-
-
-
-                 
-
-
-                 if (dt.Rows[0]["Pic"].ToString().Length > 1)
-                 {
-
-                 }
-                 else
-                     //ProPic.ImageUrl = "~/Images/userProfile.png";
-
-
-                 con.Close();
-             }
         }
 
         protected void btnSub_Click(object sender, EventArgs e)
         {
-            HttpCookie cookie = Request.Cookies["UserInfo"];
-            string uname = cookie["Uname"];
+            
+            string uname = Session["New"].ToString();
             SqlConnection con = new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
             SqlCommand com = null;
 
@@ -63,12 +31,35 @@ namespace Online_Driving_School_MS.Account
                 uplimg.PostedFile.SaveAs(Server.MapPath("~/Uploads/") + str);
                 string path = "~/Uploads/" + str;
 
-
                 con.Open();
-                string updateQuery = "Update STUDENT SET Pic='" + path + "' where Uname ='" +uname+ "'";
-                com = new SqlCommand(updateQuery, con);
-                com.ExecuteNonQuery();
+                //check whether student or employee
 
+                string chechuser = "select count(*) from STUDENT where Uname='" +uname+ "'";
+                SqlCommand countCom = new SqlCommand(chechuser, con);
+                int temp = int.Parse(countCom.ExecuteScalar().ToString());
+
+                if (temp >= 1)
+                {
+                    string updateQuery = "Update STUDENT SET Pic='" + path + "' where Uname ='" + uname + "'";
+                    com = new SqlCommand(updateQuery, con);
+                    com.ExecuteNonQuery();
+                    Response.Redirect("~/User/ProEdit.aspx");
+                }
+                else
+                {
+                    chechuser = "select count(*) from EMPLOYEE where Uname='" + uname + "'";
+                    countCom = new SqlCommand(chechuser, con);
+                    temp = int.Parse(countCom.ExecuteScalar().ToString());
+
+                    if (temp >= 1)
+                    {
+                        string updateQuery = "Update EMPLOYEE SET Pic='" + path + "' where Uname ='" + uname + "'";
+                        com = new SqlCommand(updateQuery, con);
+                        com.ExecuteNonQuery();
+                        Response.Redirect("~/Phuthuma/EmpUser/EmpProEdit.aspx");
+                    }
+                    
+                }
                 con.Close();
             }
             else
@@ -76,9 +67,7 @@ namespace Online_Driving_School_MS.Account
 
             }
 
-            Response.Redirect("~/User/ProEdit.aspx");
             
-
         }
     }
 }

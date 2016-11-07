@@ -6,12 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
 
-
-namespace Online_Driving_School_MS.User
+namespace Online_Driving_School_MS.Phuthuma.EmpUser
 {
-    public partial class ProEdit : System.Web.UI.Page
+    public partial class EmpProEdit : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,16 +20,16 @@ namespace Online_Driving_School_MS.User
 
                 con.Open();
 
-                string sqlcom = "select Name from STUDENT where Uname='" + uname + "'";
+                string sqlcom = "select Name from EMPLOYEE where Uname='" + uname + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(sqlcom, con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
                 lblHead.Text = dt.Rows[0]["Name"].ToString();
-           
+
                 con.Close();
 
-                SqlDataSource1.SelectParameters["Uname"].DefaultValue = uname;
+                SqlDataSource2.SelectParameters["Uname"].DefaultValue = uname;
             }
 
             else
@@ -39,16 +37,19 @@ namespace Online_Driving_School_MS.User
 
         }
 
-        protected void LinkButton1_Click1(object sender, EventArgs e)
+        protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
+        {
+
+        }
+
+        protected void FormView1_PageIndexChanging1(object sender, FormViewPageEventArgs e)
+        {
+
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Phuthuma/StudProEdit.aspx");
         }
-
-        protected void linkUploadLink_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Phuthuma/StudProEdit.aspx");
-        }
-
-       
     }
 }

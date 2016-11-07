@@ -16,6 +16,7 @@
         .auto-style5 {
             width: 551px
         }
+
     </style>
 </asp:Content>
 
@@ -88,7 +89,7 @@
                 <asp:Label ID="lblPass" runat="server" Text="Password:"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
