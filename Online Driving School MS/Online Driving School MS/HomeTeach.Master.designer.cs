@@ -10,7 +10,7 @@
 namespace Online_Driving_School_MS {
     
     
-    public partial class HomeAdmin {
+    public partial class HomeTeach1 {
         
         /// <summary>
         /// title control.

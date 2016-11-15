@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeAdmin.Master" AutoEventWireup="true" CodeBehind="HomeAdmin.aspx.cs" Inherits="Online_Driving_School_MS.HomeTeach" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeInst.Master" AutoEventWireup="true" CodeBehind="HomeInst.aspx.cs" Inherits="Online_Driving_School_MS.HomeInst1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -124,4 +124,3 @@
     </footer>
     <!--Footer-->
 </asp:Content>
-

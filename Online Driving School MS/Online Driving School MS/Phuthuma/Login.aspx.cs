@@ -57,7 +57,15 @@ namespace Online_Driving_School_MS.Account
                     HttpCookie cookie = new HttpCookie("UserInfo");
                     cookie["Uname"] = txtUname.Text;
                     Response.Cookies.Add(cookie);
-                    Response.Redirect("~/Phuthuma/EmpUser/EmpProEdit.aspx");
+
+                    if(dt.Rows[0]["JobTitle"].ToString()=="Admin")
+                        Response.Redirect("~/HomeAdmin.aspx");
+
+                    if (dt.Rows[0]["JobTitle"].ToString() == "Teacher")
+                        Response.Redirect("~/HomeTeach.aspx");
+
+                    if (dt.Rows[0]["JobTitle"].ToString() == "Instructor")
+                        Response.Redirect("~/HomeInst.aspx");
                 }
 
                 else

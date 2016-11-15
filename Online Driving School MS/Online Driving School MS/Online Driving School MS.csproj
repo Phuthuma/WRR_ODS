@@ -62,6 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HomeAdmin.aspx" />
+    <Content Include="HomeInst.aspx" />
+    <Content Include="HomeTeach.aspx" />
     <Content Include="HomeUser.aspx" />
     <Content Include="Phuthuma\ChangePass.aspx" />
     <Content Include="Phuthuma\EmpUser\EmpProEdit.aspx" />
@@ -115,6 +117,34 @@
     </Compile>
     <Compile Include="HomeAdmin.aspx.designer.cs">
       <DependentUpon>HomeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeInst.aspx.cs">
+      <DependentUpon>HomeInst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeInst.aspx.designer.cs">
+      <DependentUpon>HomeInst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeInst.Master.cs">
+      <DependentUpon>HomeInst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeInst.Master.designer.cs">
+      <DependentUpon>HomeInst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTeach.aspx.cs">
+      <DependentUpon>HomeTeach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeTeach.aspx.designer.cs">
+      <DependentUpon>HomeTeach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTeach.Master.cs">
+      <DependentUpon>HomeTeach.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeTeach.Master.designer.cs">
+      <DependentUpon>HomeTeach.Master</DependentUpon>
     </Compile>
     <Compile Include="HomeUser.aspx.cs">
       <DependentUpon>HomeUser.aspx</DependentUpon>
@@ -250,6 +280,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="HomeUser.Master" />
     <Content Include="HomeAdmin.Master" />
+    <Content Include="HomeTeach.Master" />
+    <Content Include="HomeInst.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
