@@ -46,6 +46,7 @@
                      <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right"> 
                              <li class="active"><asp:LinkButton ID="lbHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbPrices" runat="server">Prices</asp:LinkButton></li>
                              <li><asp:LinkButton ID="lbQuote" runat="server" PostBackUrl="~/Phuthuma/GenerateQuote.aspx">Quote</asp:LinkButton></li>
                              <li><asp:LinkButton ID="lbSession" runat="server">Sessions</asp:LinkButton></li>
                              <li><asp:LinkButton ID="lbProEdit" runat="server" PostBackUrl="~/User/ProEdit.aspx">Profile</asp:LinkButton></li>

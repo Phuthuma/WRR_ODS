@@ -65,6 +65,10 @@
     <Content Include="HomeInst.aspx" />
     <Content Include="HomeTeach.aspx" />
     <Content Include="HomeUser.aspx" />
+    <Content Include="Images\icons\icon_book.jpg" />
+    <Content Include="Images\icons\icon_car.png" />
+    <Content Include="Images\icons\icon_hire.png" />
+    <Content Include="Images\icons\icon_truck.jpg" />
     <Content Include="Phuthuma\ChangePass.aspx" />
     <Content Include="Phuthuma\EmpUser\EmpProEdit.aspx" />
     <Content Include="Phuthuma\EmpUser\RegisterEmp.aspx" />
@@ -72,6 +76,7 @@
     <Content Include="Phuthuma\GenQuoteUser.aspx" />
     <Content Include="Phuthuma\Login.aspx" />
     <Content Include="Phuthuma\PassReset.aspx" />
+    <Content Include="Phuthuma\PriceList.aspx" />
     <Content Include="Phuthuma\Registration.aspx" />
     <Content Include="Phuthuma\StudProEdit.aspx" />
     <Content Include="Phuthuma\UserProfile.aspx" />
@@ -208,6 +213,13 @@
     </Compile>
     <Compile Include="Phuthuma\PassReset.aspx.designer.cs">
       <DependentUpon>PassReset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phuthuma\PriceList.aspx.cs">
+      <DependentUpon>PriceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phuthuma\PriceList.aspx.designer.cs">
+      <DependentUpon>PriceList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Phuthuma\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>

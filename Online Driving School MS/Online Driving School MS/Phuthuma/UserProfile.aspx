@@ -2,18 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <script src="../ScriptCode.js"></script>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
         }
         .auto-style2 {
-            width: 267px
+            width: 289px
         }
     .auto-style3 {
         height: 20px;
     }
     .auto-style4 {
-        width: 267px;
+        width: 289px;
         height: 20px;
     }
     </style>

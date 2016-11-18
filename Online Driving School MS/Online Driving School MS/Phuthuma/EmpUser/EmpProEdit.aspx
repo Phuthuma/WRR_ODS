@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeAdmin.Master" AutoEventWireup="true" CodeBehind="EmpProEdit.aspx.cs" Inherits="Online_Driving_School_MS.Phuthuma.EmpUser.EmpProEdit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
      <style type="text/css">
         .auto-style1 {
             width: 100%;

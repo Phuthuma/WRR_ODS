@@ -37,6 +37,32 @@ namespace Online_Driving_School_MS.Phuthuma.EmpUser
 
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                string uname = Session["New"].ToString();
+
+                SqlConnection con = new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
+
+                con.Open();
+
+                string sqlcom = "select JobTitle from EMPLOYEE where Uname='" + uname + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(sqlcom, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows[0]["JobTitle"].ToString() == "Instructor")
+                    this.Page.MasterPageFile = "~/HomeInst.Master";
+
+                if (dt.Rows[0]["JobTitle"].ToString() == "Teacher")
+                    this.Page.MasterPageFile = "~/HomeTeach.Master";
+
+                con.Close();
+            }
+            
+        }
+
         protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
         {
 

@@ -67,6 +67,15 @@ namespace Online_Driving_School_MS {
         protected global::System.Web.UI.WebControls.LinkButton lbSession;
         
         /// <summary>
+        /// lbMat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbMat;
+        
+        /// <summary>
         /// lbProEdit control.
         /// </summary>
         /// <remarks>

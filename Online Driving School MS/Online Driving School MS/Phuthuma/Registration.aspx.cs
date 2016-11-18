@@ -37,6 +37,13 @@ namespace Online_Driving_School_MS.Account
                 FeedMsg.Text = "You are successfully registered";
                 FeedMsg.ForeColor = System.Drawing.Color.FromName("Green");
                 FeedMsg.Visible = true;
+
+                Session["New"] = txtUname.Text;
+
+                HttpCookie cookie = new HttpCookie("UserInfo");
+                cookie["Uname"] = txtUname.Text;
+                Response.Cookies.Add(cookie);
+                Response.Redirect("~/User/ProEdit.aspx");
             }
 
             con.Close();   

@@ -43,11 +43,12 @@
                        </div>
                      <div class="navbar-collapse collapse">
                        <ul class="nav navbar-nav navbar-right"> 
-                             <li class="active"><asp:LinkButton ID="lbHome" runat="server" PostBackUrl="~/HomeAdmin.aspx">Home</asp:LinkButton></li>
+                             <li class="active"><asp:LinkButton ID="lbHome" runat="server" PostBackUrl="~/HomeTeach.aspx">Home</asp:LinkButton></li>
                              <li><asp:LinkButton ID="lbEmps" runat="server">Students</asp:LinkButton></li>
                              <li><asp:LinkButton ID="lbSession" runat="server">Classes</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbMat" runat="server">Study Material</asp:LinkButton></li>
                              <li><asp:LinkButton ID="lbProEdit" runat="server" PostBackUrl="~/Phuthuma/EmpUser/EmpProEdit.aspx">Profile</asp:LinkButton></li>
-                             <li><asp:LinkButton ID="lbLogOut" runat="server">LogOut</asp:LinkButton></li>
+                             <li><asp:LinkButton ID="lbLogOut" runat="server" OnClick="lbLogOut_Click">LogOut</asp:LinkButton></li>
                         </ul>   
                     </div>
                 </div>

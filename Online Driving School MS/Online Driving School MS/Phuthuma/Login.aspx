@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <script src="../ScriptCode.js"></script>
+    <link href="../Style.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
             width: 100%;
