@@ -13,19 +13,16 @@ namespace Online_Driving_School_MS.Phuthuma
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //SqlConnection con = new SqlConnection("Data Source=openbox.nmmu.ac.za\\wrr;Initial Catalog=MC04;Integrated Security=True");
 
-            //con.Open();
+        }
 
-            //string chechuser = "select Pic, Heading, Price from PRICE";
-            //SqlDataAdapter sda = new SqlDataAdapter(chechuser, con);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+               this.Page.MasterPageFile = "~/HomeUser.Master";
+            }
 
-            //ListView1.DataSource = dt;
-            //ListView1.DataBind();
-
-            //con.Close();
 
         }
     }
